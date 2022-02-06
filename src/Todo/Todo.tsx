@@ -30,7 +30,7 @@ const Todo = (props: Props) => {
             <input
                 type='checkbox'
                 checked={props.todo?.completed}
-                onClick={toggleCompleted}
+                onChange={toggleCompleted}
             />
             <button onClick={deleteTodo}>
             Delete 

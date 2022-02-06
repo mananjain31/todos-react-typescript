@@ -1,5 +1,7 @@
+@use '../App.scss' as *;
+
 .todo {
-    background-color: gray;
+    background-color: slateblue;
     color: white;
     border-radius: 10px;
     padding: .5rem;
@@ -7,9 +9,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: $font-size;
 
     & > .actions {
         display: flex;
         align-items: center;
+        color: black;
+
+        & > *{
+            font-size: calc($font-size - 1rem);
+        }
+
+        input {
+            background: black;
+            width: 20px;
+            height: 20px;
+        }
     }
 }
