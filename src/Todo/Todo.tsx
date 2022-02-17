@@ -1,6 +1,8 @@
 import React from 'react';
 import {AppContext, AppContextTypes, TodoType} from '../App';
 import './Todo.scss'
+import {UncheckedIcon, CheckedIcon, TrashIcon} from '../Assets/icons'
+
 type Props = {
     todo : TodoType
 };
@@ -20,22 +22,33 @@ const Todo = (props: Props) => {
             payload : props.todo.id,
         });   
     }
+
     return <div className='todo'>
-        <div className="content">
+
+        <p className="content">
             {
-                props.todo.completed ? <s>{props.todo.content}</s> : <b>{props.todo.content}</b>
+                props.todo.completed ? <s>{props.todo.content}</s> : props.todo.content
             }
-        </div>
+        </p>
+
         <div className="actions">
-            <input
-                type='checkbox'
-                checked={props.todo?.completed}
-                onChange={toggleCompleted}
-            />
-            <button onClick={deleteTodo}>
-            Delete 
-            </button>
+
+            <div onClick={toggleCompleted}>
+                {
+                    props.todo?.completed 
+                    ? 
+                    <CheckedIcon />
+                    :
+                    <UncheckedIcon />
+                }
+            </div>
+
+            <div onClick={deleteTodo} >
+                <TrashIcon  />
+            </div>
+
         </div>
+
     </div>;
 };
 

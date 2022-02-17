@@ -1,6 +1,21 @@
-$font-size : 2rem;
+$font-size: 2rem;
+$small: 300px;
+$medium: 900px;
+$primary-color: black;
+
 .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  margin: auto;
+  margin-top: 1rem;
+
+  border-radius: 0.3rem;
+
+  @media screen and (max-width: $medium) {
+    width: 100%;
+  }
 }

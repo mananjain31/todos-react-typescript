@@ -1,12 +1,29 @@
-@use '../App.scss' as *;
+@use "../App.scss" as *;
+
 .adder {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    & > *{
-        font-size: $font-size;
-    }
-    input {
-        flex: 1;
-    }
+  display: flex;
+  gap: 1rem;
+  background-color: #eee;
+  padding: 0.3rem 0.4rem;
+  border-radius: 0.3rem;
+
+  input {
+    flex: 1;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: $primary-color;
+  }
+
+  //   button {
+  //     display: grid;
+  //     place-content: center;
+  //     border: none;
+
+  //     svg {
+  //       color: white;
+  //     }
+  //   }
+
+  width: 100%;
 }
