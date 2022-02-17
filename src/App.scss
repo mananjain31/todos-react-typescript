@@ -1,6 +1,6 @@
 $font-size: 2rem;
 $small: 300px;
-$medium: 900px;
+$medium: 600px;
 $primary-color: black;
 
 .app {
@@ -12,10 +12,13 @@ $primary-color: black;
   background-color: white;
   margin: auto;
   margin-top: 1rem;
-
   border-radius: 0.3rem;
+  transition: width 1s ease;
 
   @media screen and (max-width: $medium) {
-    width: 100%;
+    width: 70%;
+  }
+  @media screen and (max-width: $small) {
+    width: 90%;
   }
 }
